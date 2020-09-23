@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
 
-require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
+
 // array of questions for user
 const questions = [
     {type: "input",
@@ -21,7 +23,12 @@ const questions = [
     },
     {type: "list",
      name: "license",
-     message: "?"
+     message: "Which license are you using?",
+     choices: [
+        "MIT",
+        "GNU General Public",
+        "GNU Library"
+     ]
     },
     {type: "input",
      name: "contributions",
@@ -32,40 +39,27 @@ const questions = [
      message: "Please enter test instructions"
     },
     {type: "input",
-     name: "questions",
+     name: "github",
+     message: "Please enter your GitHub user name"
+    },
+    {type: "input",
+     name: "email",
      message: "Please enter your email address"
     }
 ];
 
-inquirer.prompt(questions).then(function(answers) {
-    let generatedMd = "";
-
-    generatedMD += "# " + answers.title;
-    generatedMD += "## Table of Contents";
-    generatedMD += "# " + answers.description;
-    generatedMD += "# " + answers.installation;
-    generatedMD += "# " + answers.usage;
-    generatedMD += "# " + answers.license;
-    generatedMD += "# " + answers.contributions;
-    generatedMD += "# " + answers.tests;
-    generatedMD += "# Please reach out to " + answers.questions + " with any questions.";
-}
+    function writeToFile(fileName, data) {
+        console.log(data);
+        return fs.writeFileSync(fileName, data) 
+    };
 
 
-
-false.writeFile("MyReadMe.md", generatedMD, function() {
-
-});
-
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
 
 // function to initialize program
 function init() {
-
-}
+    inquirer.prompt(questions).then(function(answers) {
+        writeToFile("MyReadMe.md", generateMarkdown(answers));  
+})};
 
 // function call to initialize program
 init();
