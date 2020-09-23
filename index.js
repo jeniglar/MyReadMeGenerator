@@ -37,7 +37,26 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions).then()
+inquirer.prompt(questions).then(function(answers) {
+    let generatedMd = "";
+
+    generatedMD += "# " + answers.title;
+    generatedMD += "## Table of Contents";
+    generatedMD += "# " + answers.description;
+    generatedMD += "# " + answers.installation;
+    generatedMD += "# " + answers.usage;
+    generatedMD += "# " + answers.license;
+    generatedMD += "# " + answers.contributions;
+    generatedMD += "# " + answers.tests;
+    generatedMD += "# Please reach out to " + answers.questions + " with any questions.";
+}
+
+
+
+false.writeFile("MyReadMe.md", generatedMD, function() {
+
+});
+
 
 // function to write README file
 function writeToFile(fileName, data) {
