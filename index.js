@@ -26,8 +26,8 @@ const questions = [
      message: "Which license are you using?",
      choices: [
         "MIT",
-        "GNU General Public",
-        "GNU Library"
+        "ISC",
+        "GNU-Library"
      ]
     },
     {type: "input",
@@ -52,8 +52,6 @@ const questions = [
         console.log(data);
         return fs.writeFileSync(fileName, data) 
     };
-
-
 
 // function to initialize program
 function init() {
