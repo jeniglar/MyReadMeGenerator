@@ -12,12 +12,12 @@ Video Demonstration: https://drive.google.com/file/d/1Rxh6a9f9XHSEoxYNxtLiBSJDBf
 
 
 ## Table of Contents
-- [Installation](##Installation)
-- [Usage](##Usage)
-- [License](##License)
-- [Contributions](##Contributions)
-- [Tests](##Tests)
-- [Questions](##Questions) 
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Questions](#questions) 
   
 
 ## Installation
