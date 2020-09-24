@@ -1,4 +1,4 @@
-# GoodReadMeGenerator ![License](https://img.shields.io/static/v1?label=MIT&message=license&color=red)
+# Good ReadMe Generator ![License](https://img.shields.io/static/v1?label=MIT&message=license&color=red)
 
 
 ## Description 
