@@ -6,7 +6,9 @@ This application will prompt the user with a series of questions about their pro
 
 Video Demonstration: https://drive.google.com/file/d/1Rxh6a9f9XHSEoxYNxtLiBSJDBfwV89sc/view?usp=sharing
 
-
+<p align="center">
+<img width="70%" src="utils/screenshot.png" alt="Sample ReadMe">
+</>
 
 
 ## Table of Contents
